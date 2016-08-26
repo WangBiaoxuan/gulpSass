@@ -1,0 +1,27 @@
+$fontSize: 20px;
+body{
+    font-size:$fontSize;
+}
+
+$linkColor: #08c #333 !default;   //hte first one is the default value , the secend one is the hover value 
+a{
+  color:nth($linkColor,1);
+
+  &:hover{
+    color:nth($linkColor,2);
+  }
+}
+
+$headings: (h1: 2em, h2: 1.5em, h3: 1.2em, h4: 1em, h5: 0.8em);
+@each $header, $size in $headings {
+  #{$header} {
+    font-size: $size;
+  }
+}
+
+h1{
+	color: pink;
+}
+h2{
+	color: red;
+}
